@@ -1,0 +1,7 @@
+service vendor.health-samsung /vendor/bin/hw/vendor.samsung.hardware.health-service
+    class hal
+    user root
+    group root
+    capabilities WAKE_ALARM BLOCK_SUSPEND
+    file /dev/kmsg w
+    seclabel u:r:recovery:s0
